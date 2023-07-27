@@ -103,6 +103,8 @@ addBookForm.addEventListener("submit", (event) => {
   addBookToLibrary(titleInput, authorInput, pagesInput, readInput);
 
   addBookForm.reset();
+
+  addBookForm.style.display = "none";
 });
 
 function setupRemoveButtons() {

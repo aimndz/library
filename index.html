@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d4c70ebaf1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <i class="fa-solid fa-plus add-book" id="add-book-btn"></i>
+
+    <header>
+      <p class="container">My Library</p>
+    </header>
+
+    <div class="header-wrapper container">
+      <div class="quote-wrapper">
+        <p class="quote">" Books are a uniquely portable magic. "</p>
+        <p class="quote-author">- Stephen King</p>
+      </div>
+      <div class="library-info">
+        <div>
+          <span class="info-title">Books Total: </span>
+          <span class="book-total-num">0</span>
+        </div>
+        <div>
+          <span class="info-title">Read: </span>
+          <span class="books-read-num">0</span>
+        </div>
+        <div>
+          <span class="info-title">Unread: </span
+          ><span class="books-unread-num">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="books-container container">
+      <ul></ul>
+      <p class="empty-lib">"Your Library is Currently Empty. :<"</p>
+    </div>
+
+    <form action="#" class="add-book-form">
+      <div class="book-top">
+        <p>Add New Book</p>
+        <i class="fa-solid fa-xmark" id="close-form-btn"></i>
+      </div>
+      <div class="input-container">
+        <div class="col-input">
+          <label for="title-input">Title: </label>
+          <input
+            type="text"
+            id="title-input"
+            placeholder="Enter book title..."
+            required
+          />
+        </div>
+        <div class="col-input">
+          <label for="author-input">Author: </label>
+          <input
+            type="text"
+            id="author-input"
+            placeholder="Enter the author..."
+            required
+          />
+        </div>
+        <div class="col-input">
+          <label for="pages-input">Number of Pages: </label>
+          <input
+            type="number"
+            id="pages-input"
+            placeholder="Enter the number of pages..."
+            min="0"
+            required
+          />
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="read-input" />
+          <label for="read-input">I have already read this book.</label>
+        </div>
+        <button type="submit" class="add-book-btn">Add Book</button>
+      </div>
+    </form>
+  </body>
+</html>

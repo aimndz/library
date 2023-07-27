@@ -1,0 +1,284 @@
+@font-face {
+  font-family: Esthetique;
+  src: url(otf/esthetique.otf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1em;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  text-align: center;
+  text-transform: uppercase;
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+.header-wrapper {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 1em;
+  margin-block: 2em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library-info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5em;
+}
+
+.quote-wrapper {
+  font-weight: 900;
+  font-family: Esthetique;
+}
+
+.quote {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.3em;
+}
+
+.info-title {
+  font-weight: 900;
+}
+
+.empty-lib {
+  font-weight: 900;
+  font-size: clamp(1.3rem, 4vw, 2.5rem);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.books-container ul {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  min-width: 300px;
+}
+
+.book {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.book-info-wrapper {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.book span:first-child {
+  font-weight: 900;
+}
+
+.book-status {
+  border: 1px solid black;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.unread {
+  background-color: black;
+  color: white;
+}
+
+.unread:hover {
+  color: rgb(240, 240, 240);
+}
+
+.read {
+  background-color: white;
+  color: black;
+}
+
+.read:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.book-top {
+  background-color: black;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: end;
+  color: white;
+}
+
+.book-top i {
+  color: white;
+  cursor: pointer;
+}
+
+.fa-plus {
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.fa-plus:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.add-book-form {
+  max-width: 400px;
+  width: 80%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 999;
+  display: none;
+}
+
+.input-container {
+  padding: 1em;
+}
+
+.input-container div + div {
+  margin-top: 1em;
+}
+
+.col-input > * {
+  display: block;
+  width: 100%;
+}
+
+.col-input label {
+  margin-bottom: 0.2em;
+}
+
+.input-container input {
+  border-radius: 6px;
+  padding: 0.7em;
+  border: 1px solid black;
+  font-size: 1rem;
+}
+
+.input-container input:focus {
+  outline: 0;
+}
+
+.add-book-form .book-top {
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.checkbox-container input:checked {
+  accent-color: black;
+}
+
+#pages-input::-webkit-outer-spin-button,
+#pages-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-book-btn {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 1em;
+  border-radius: 6px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+. -btn:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .header-wrapper {
+    flex-direction: column;
+  }
+
+  .library-info {
+    align-items: center;
+  }
+
+  .quote-wrapper {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header-wrapper {
+    flex-direction: column;
+  }
+
+  .library-info {
+    align-items: center;
+  }
+
+  .quote-wrapper {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+
+  .fa-plus {
+    bottom: 2em;
+    right: 1em;
+  }
+}

@@ -13,6 +13,10 @@
 
 body {
   font-family: Helvetica, sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -249,6 +253,12 @@ header {
 .add-book-btn:hover {
   background-color: white;
   color: black;
+}
+
+.footer {
+  padding: 1em;
+  margin-top: auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 700px) {
